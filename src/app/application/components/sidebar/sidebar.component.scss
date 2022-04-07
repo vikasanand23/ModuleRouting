@@ -1,0 +1,170 @@
+.chevron::before {
+    border-style: solid;
+    border-width: 0.15em 0.15em 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.35em;
+    left: 0.15em;
+    position: relative;
+    top: 0.3em;
+    vertical-align: top;
+    width: 0.35em;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transition: 0.3s;
+    width: 50px;
+    &.expanded {
+        width: 190px;
+        .header {
+            h1 {
+                margin-left: 0px;
+            }
+            .chevron {
+                margin-left: 0px;
+                &::before {
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+        .content {
+            .link {
+                .content {
+                    .title {
+                        max-width: 100px;
+                    }
+                    .icon {
+                        margin-right: 3px;
+                    }
+                }
+                .children {
+                    .content {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    background: #1d1e2c;
+    color: #fff;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background: #11161a;
+        h1 {
+            font-size: 20px;
+            color: #fff;
+            margin: 0;
+            flex: 1;
+            transition: 0.3s;
+            margin-left: -100px;
+        }
+        .chevron {
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: -25px;
+            padding: 10px;
+            min-width: 20px;
+            height: 20px;
+            display: block;
+            text-align: center;
+            &::before {
+                transition: 0.3s;
+                transform: rotate(45deg);
+            }
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    .content {
+        .link {
+            .children {
+                .content {
+                    background: #27283a;
+                    // padding-left: 30px;
+                    padding-left: 10px;
+                    &.active {
+                        background: #191a27;
+                    }
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                // padding: 10px 7px;
+                padding: 0.475rem 0.5rem;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background: #fff;
+                    color: #0f1017;
+                    .title {
+                        color: #0f1017;
+                    }
+                    svg {
+                        fill: white;
+                    }
+                }
+                &:active {
+                    background: #0f1017;
+                    .title {
+                        color: white;
+                    }
+                }
+                &:focus {
+                    background: red;
+                    .title {
+                        color: white;
+                    }
+                }
+                .icon {
+                    flex: 0 0 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 0px;
+                }
+                .title {
+                    flex: 1;
+                    // display: none;
+                    color: #fff;
+                    transition: 0.3s;
+                    max-width: 0px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.link {
+    border-bottom: 1px solid rgb(80, 80, 80);
+}
+
+.imgDiv {
+    text-align: center;
+}
+
+.logoImg {
+    width: 120px;
+    height: 61px;
+    padding: 5px 10px;
+    background: #fff;
+    margin: 10px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}

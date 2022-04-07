@@ -1,0 +1,23 @@
+.content {
+    margin-left: 38px;
+    margin-right: -8px;
+    transition: 0.3s;
+    &.sidebarExpanded {
+        margin-left: 178px;
+    }
+}
+
+.contentHeader {
+    background-color: #e5f2ef;
+    padding: 15px;
+    margin-bottom: 1rem;
+}
+
+.navHeading {
+    cursor: pointer;
+}
+
+.navContent {
+    // background-color: red;
+    padding: 0 15px;
+}

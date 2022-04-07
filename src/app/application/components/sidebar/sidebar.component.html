@@ -1,0 +1,55 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+    <div class="header">
+    </div>
+    <div class="content">
+        <div class="link">
+            <div class="content" (click)="subMenu('Summary')">
+                <div class="icon">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                </div>
+                <div class="title">Summary</div>
+            </div>
+        </div>
+
+        <div class="link">
+            <div class="content" (click)="subMenu('Invoices')">
+                <div class="icon">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                </div>
+                <div class="title">Invoices</div>
+            </div>
+        </div>
+        <div class="link with-children">
+            <div class="content" (click)="subMenu('Payment')">
+                <div class="icon">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                </div>
+                <div class="title">Payment Methods</div>
+            </div>
+        </div>
+        <div class="link with-children">
+            <div class="content" (click)="subMenu('Administration')">
+                <div class="icon">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                </div>
+                <div class="title">Administration</div>
+            </div>
+        </div>
+
+
+        <div class="link with-children">
+            <div class="content" (click)="subMenu('Help')">
+                <div class="icon">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                </div>
+                <div class="title">Help</div>
+            </div>
+
+        </div>
+
+        <button (click)="expandBtnClick()">
+          <i class="fa fa-angle-double-left" aria-hidden="true" *ngIf="isExpanded"></i>
+          <i class="fa fa-angle-double-right" aria-hidden="true" *ngIf="!isExpanded"></i>
+        </button>
+    </div>
+</div>

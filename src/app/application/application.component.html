@@ -1,0 +1,16 @@
+<div>
+    <app-header></app-header>
+</div>
+
+<div style="position: relative;">
+    <app-sidebar (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+    <!-- <app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar> -->
+    <div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+        <div class="contentHeader">
+            <i class="fa fa-bars navHeading" aria-hidden="true" (click)="navIconClick()"></i>
+        </div>
+        <div class="navContent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-matDialogContent">
+            <div style="width: 15%; display: inline-block;">
+                <div class="invoiceHeaderLeft">
+                    Viewing 12 of 12
+                </div>
+            </div>
+            <div style="width: 70%; display: inline-block;">
+
+                <div class="checkProp" [ngStyle]="{'width.%': tabWidth}" *ngFor="let invoice of InvoiceTab" (click)="clickedMenuItems(invoice)" [routerLink]="invoice.name" routerLinkActive="active" [ngClass]="{
+              'showBorder': invoice.name !== selectedTab,
+              'hideBorder': invoice.name === selectedTab
+            }">
+                    <div class="invoiceHeader">{{invoice.name}}</div>
+
+                </div>
+            </div>
+            <div style="width: 15%; display: inline-block;">
+                <div class="invoiceHeaderRight">
+                    Search
+                </div>
+            </div>
+        </div>
+        <p class="card-text">
+            <router-outlet></router-outlet>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+    <input [placeholder]='searchTxt' class='js-search' type="text" (focusout)="focusOut($event)" (focusin)="focusIn($event)">
+    <i [ngClass]="{
+      'showBorder': expandedState === true,
+      'hideBorder': expandedState === false
+    }">se</i>
+    <!-- <i class="fa fa-search"></i> -->
+</div>

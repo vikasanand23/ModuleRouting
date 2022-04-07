@@ -1,0 +1,15 @@
+<app-animated-search [searchTxt]="'Search or Tracking Numbers'"></app-animated-search>
+
+<div class="card-header">
+    Edit Columns
+</div>
+<div class="card-matDialogContent">
+    <div class="checkProp" *ngFor="let columns of editColumns">
+        <input type="checkbox" [name]="columns" class="colunmCheckbox" (change)="onColumnChecked($event, columns)" [checked]="columns.checked" [disabled]="columns.disable" /> {{columns.name}}
+    </div>
+</div>
+
+<div class="card-footer">
+    <button type="submit" class="customSubmit" [attr.disabled]="true" *ngIf="customSubmitDisable">Submit</button>
+    <button type="submit" class="customSubmit" (click)="columnSubmit()" *ngIf="!customSubmitDisable">Submit</button>
+</div>
