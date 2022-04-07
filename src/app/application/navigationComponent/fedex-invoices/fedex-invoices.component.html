@@ -8,7 +8,7 @@
             </div>
             <div style="width: 70%; display: inline-block;">
 
-                <div class="checkProp" [ngStyle]="{'width.%': tabWidth}" *ngFor="let invoice of InvoiceTab" (click)="clickedMenuItems(invoice)" [routerLink]="invoice.name" routerLinkActive="active" [ngClass]="{
+                <div class="checkProp" [ngStyle]="{'width.%': tabWidth}" *ngFor="let invoice of InvoiceTab" (click)="clickedMenuItems(invoice)" [ngClass]="{
               'showBorder': invoice.name !== selectedTab,
               'hideBorder': invoice.name === selectedTab
             }">
@@ -23,7 +23,10 @@
             </div>
         </div>
         <p class="card-text">
-            <router-outlet></router-outlet>
+            <!-- <router-outlet></router-outlet> -->
+            <app-views *ngIf="selectedTab==='Views'"></app-views>
+            <app-filters *ngIf="selectedTab==='Filter'"></app-filters>
+            <app-edit-columns *ngIf="selectedTab==='Edit Column'"></app-edit-columns>
         </p>
     </div>
 </div>

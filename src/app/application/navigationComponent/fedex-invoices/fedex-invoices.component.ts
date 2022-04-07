@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FedexInvoicesComponent implements OnInit {
   InvoiceTab = [{ name: 'Filter' }, { name: 'Edit Column' }, { name: 'Views' }];
   tabWidth = 33.3;
-  selectedTab: any;
+  selectedTab: any = 'Filter';
   constructor() {}
 
   ngOnInit(): void {

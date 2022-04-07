@@ -9,20 +9,20 @@ const routes: Routes = [
   {
     path: '',
     component: FedexInvoicesComponent,
-    children: [
-      {
-        path: 'Filter',
-        component: FiltersComponent,
-      },
-      {
-        path: 'Views',
-        component: ViewsComponent,
-      },
-      {
-        path: 'Edit Column',
-        component: EditColumnsComponent,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: 'Filter',
+    //     component: FiltersComponent,
+    //   },
+    //   {
+    //     path: 'Views',
+    //     component: ViewsComponent,
+    //   },
+    //   {
+    //     path: 'Edit Column',
+    //     component: EditColumnsComponent,
+    //   },
+    // ],
   },
 ];
 
